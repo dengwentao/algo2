@@ -133,7 +133,7 @@ public:
     }
 };
 
-int main()
+int mainInv2()
 {
     vector<Interval> intervals = {Interval(1,3), Interval(2,6), Interval(6,10), Interval(15,18)};
     Solution sol;
