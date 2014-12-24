@@ -13,6 +13,7 @@
 		44CAC7DF1A4388D5005330DC /* Jump.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44CAC7DE1A4388D5005330DC /* Jump.cpp */; };
 		44CAC7E11A43A706005330DC /* DivideMore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44CAC7E01A43A706005330DC /* DivideMore.cpp */; };
 		44CAC7E31A44F55C005330DC /* LongestIncrSeq.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44CAC7E21A44F55C005330DC /* LongestIncrSeq.cpp */; };
+		44CAC7E71A4A7A80005330DC /* MinAdjustCost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44CAC7E61A4A7A80005330DC /* MinAdjustCost.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,7 @@
 		44CAC7DE1A4388D5005330DC /* Jump.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Jump.cpp; sourceTree = "<group>"; };
 		44CAC7E01A43A706005330DC /* DivideMore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DivideMore.cpp; sourceTree = "<group>"; };
 		44CAC7E21A44F55C005330DC /* LongestIncrSeq.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LongestIncrSeq.cpp; sourceTree = "<group>"; };
+		44CAC7E61A4A7A80005330DC /* MinAdjustCost.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MinAdjustCost.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				44CAC7DE1A4388D5005330DC /* Jump.cpp */,
 				44CAC7E01A43A706005330DC /* DivideMore.cpp */,
 				44CAC7E21A44F55C005330DC /* LongestIncrSeq.cpp */,
+				44CAC7E61A4A7A80005330DC /* MinAdjustCost.cpp */,
 			);
 			path = Algo2;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 				44CAC7DF1A4388D5005330DC /* Jump.cpp in Sources */,
 				44CAC7E31A44F55C005330DC /* LongestIncrSeq.cpp in Sources */,
 				44CAC7DD1A40F6C9005330DC /* Intervals.cpp in Sources */,
+				44CAC7E71A4A7A80005330DC /* MinAdjustCost.cpp in Sources */,
 				44CAC7DB1A3FEE8D005330DC /* ValidNumber.cpp in Sources */,
 				44CAC7E11A43A706005330DC /* DivideMore.cpp in Sources */,
 			);
