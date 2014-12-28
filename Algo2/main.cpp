@@ -9,28 +9,68 @@
 #include <iostream>
 #include <climits>
 #include <vector>
+#include <stack>
 using namespace std;
 
-bool incr(vector<int>& v)
+class MinStack
 {
-    int min = INT_MAX;
-    int mid = INT_MAX;
-    for(int i : v)
+    stack<int> s;
+    stack<int> min;
+public:
+    MinStack() = default;
+    ~MinStack() = default;
+
+    int top()
     {
-        if(i <= min)
-            min = i;
-        else if(i <= mid)
-            mid = i;
-        else
-            return true;
+        if(s.size()==0)
+            throw "empty stack";
+        return s.top();
     }
-    return false;
-}
+
+    int getMin()
+    {
+        if(min.size()==0)
+            throw "empty stack";
+        return min.top();
+    }
+
+    void push(int v)
+    {
+        int m = min.size()==0 ? INT_MAX : min.top();
+        s.push(v);
+        if(v <= m) //consider dups
+            min.push(v);
+    }
+
+    void pop()
+    {
+        if(s.size()==0)
+            throw "empty stack";
+        int v = s.top();
+        s.pop();
+        int m = min.top();
+        if(v == m) //consider dups
+            min.pop();
+    }
+};
+
 
 int mainX()
 {
-    vector<int> v = {3, 2, -2, 3, 4};
-    cout << incr(v) << endl;
+    MinStack s;
+    s.push(-2);
+    s.push(0);
+    s.push(-1);
+   // s.push(3);
+//    s.pop();
+//    s.pop();
+    cout << s.getMin() << ' ' << s.top() << endl;
+    s.pop();
+    cout << s.getMin() << ' ' << s.top() << endl;
+    s.push(6);
+    //s.push(3);
+    cout << s.getMin() << ' ' << s.top() << endl;
     return 0;
 }
+
 
