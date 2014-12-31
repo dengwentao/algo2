@@ -7,10 +7,12 @@
 //
 
 #include <iostream>
+#include <unordered_map>
 #include <climits>
 #include <vector>
 #include <stack>
 using namespace std;
+#include <assert.h>
 
 class MinStack
 {
@@ -54,22 +56,29 @@ public:
     }
 };
 
+bool isAnagram(const string string1, const string& string2)
+{
+    unordered_map<char, int> map;
+    for(char c : string1)
+        map[c] += 1;
+    for(char c : string2)
+    {
+        map[c] -= 1;
+        if(map[c]==0)
+            map.erase(c);
+    }
+    return map.size()==0;
+}
+
+
 
 int mainX()
 {
-    MinStack s;
-    s.push(-2);
-    s.push(0);
-    s.push(-1);
-   // s.push(3);
-//    s.pop();
-//    s.pop();
-    cout << s.getMin() << ' ' << s.top() << endl;
-    s.pop();
-    cout << s.getMin() << ' ' << s.top() << endl;
-    s.push(6);
-    //s.push(3);
-    cout << s.getMin() << ' ' << s.top() << endl;
+    assert(isAnagram("", ""));
+    assert(!isAnagram("", "ab"));
+    assert(!isAnagram("aa", ""));
+    assert(isAnagram("aa", "aa"));
+    assert(isAnagram("abc", "cba"));
     return 0;
 }
 
