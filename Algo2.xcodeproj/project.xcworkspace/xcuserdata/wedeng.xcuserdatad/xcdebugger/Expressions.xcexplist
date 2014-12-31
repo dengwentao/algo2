@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "Solution::maximumGap(std::__1::vector&lt;int, std::__1::allocator&lt;int&gt; &gt;&amp;):MaxGap.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "index(v)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Solution::longestValidParentheses(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;):LongestValidParentheses.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "st.empty()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Solution::Slot::insert(int):MaxGap.cpp">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
