@@ -53,7 +53,7 @@ public:
     }
 };
 
-int main()
+int mainLongestV()
 {
     Solution sol;
     cout << sol.longestValidParentheses("()") << endl;

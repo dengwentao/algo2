@@ -6,79 +6,70 @@
 //  Copyright (c) 2014 WENTAO INC. All rights reserved.
 //
 
-#include <iostream>
-#include <unordered_map>
-#include <climits>
+#include <string>
 #include <vector>
-#include <stack>
+#include <list>
+#include <queue>
+#include <map>
+#include <utility>
+#include <unordered_map>
+#include <iostream>
+#include <algorithm>
 using namespace std;
-#include <assert.h>
+#include "assert.h"
 
-class MinStack
+// compare two lists
+struct LessList
 {
-    stack<int> s;
-    stack<int> min;
-public:
-    MinStack() = default;
-    ~MinStack() = default;
-
-    int top()
+    bool operator()(const list<pair<int, string>>* l1, const list<pair<int, string>>* l2) const
     {
-        if(s.size()==0)
-            throw "empty stack";
-        return s.top();
-    }
-
-    int getMin()
-    {
-        if(min.size()==0)
-            throw "empty stack";
-        return min.top();
-    }
-
-    void push(int v)
-    {
-        int m = min.size()==0 ? INT_MAX : min.top();
-        s.push(v);
-        if(v <= m) //consider dups
-            min.push(v);
-    }
-
-    void pop()
-    {
-        if(s.size()==0)
-            throw "empty stack";
-        int v = s.top();
-        s.pop();
-        int m = min.top();
-        if(v == m) //consider dups
-            min.pop();
+        // we use > for less because priority queue is a max heap.
+        return l1->front().first > l2->front().first;
     }
 };
 
-bool isAnagram(const string string1, const string& string2)
+// multiway merge sort on sorted lists.
+// use list because we need to remove front.
+vector<pair<int, string>> multiMergeSort(vector<list<pair<int, string>>>& indexes)
 {
-    unordered_map<char, int> map;
-    for(char c : string1)
-        map[c] += 1;
-    for(char c : string2)
+    vector<pair<int, string>> res;
+    priority_queue<list<pair<int, string>>*, vector<list<pair<int, string>>*>, LessList> pq;
+    
+    //push each list into the priority queue.
+    for(int i=0; i<indexes.size(); i++)
     {
-        map[c] -= 1;
-        if(map[c]==0)
-            map.erase(c);
+        if(!indexes[i].empty())
+            pq.push(&indexes[i]);
     }
-    return map.size()==0;
+    
+    while(!pq.empty())
+    {
+        list<pair<int, string>>* l = pq.top();  //the list which has min front value
+        pq.pop();
+        res.push_back(l->front());
+        l->pop_front();
+        if(!l->empty())
+            pq.push(l);
+    }
+    
+    return res;
 }
 
 
 
 int mainX()
 {
-    assert(isAnagram("", ""));
-    assert(!isAnagram("", "ab"));
-    assert(!isAnagram("aa", ""));
-    assert(isAnagram("aa", "aa"));
-    assert(isAnagram("abc", "cba"));
+    vector<list<pair<int, string>>> indexes = {{{1, "a"}, {3, "c"}, {4, "b"}}, {{2, "a"}, {5, "b"}}};
+    for(auto l : indexes)
+    {
+        for(auto p : l)
+            cout << p.first << ' ' << p.second << endl;
+    }
+
+    
+    vector<pair<int, string>> pairs = multiMergeSort(indexes);
+    for(pair<int, string> p : pairs)
+        cout << p.first << ' ' << p.second << endl;
     return 0;
 }
 
