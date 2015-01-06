@@ -334,7 +334,7 @@ public:
     }
 };
 
-int main()
+int mainXXX()
 {
     string s = "abaababbaba";
     vector<string> L = {"ab","ba","ab","ba"};
