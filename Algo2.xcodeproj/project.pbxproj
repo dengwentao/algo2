@@ -12,6 +12,7 @@
 		44154E841A54763200FE182F /* LongestValidParentheses.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44154E831A54763200FE182F /* LongestValidParentheses.cpp */; };
 		44154E861A54AAFB00FE182F /* WildcardMatching.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44154E851A54AAFB00FE182F /* WildcardMatching.cpp */; };
 		44A1EB2E1A5B5F6A00AAC960 /* OptimalBST.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44A1EB2D1A5B5F6A00AAC960 /* OptimalBST.cpp */; };
+		44A1EB301A5C729800AAC960 /* TopoSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44A1EB2F1A5C729800AAC960 /* TopoSort.cpp */; };
 		44B1178D1A57503D0061B38A /* SubstrConcat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44B1178C1A57503D0061B38A /* SubstrConcat.cpp */; };
 		44CAC7D41A3FE15A005330DC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44CAC7D31A3FE15A005330DC /* main.cpp */; };
 		44CAC7DB1A3FEE8D005330DC /* ValidNumber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44CAC7DA1A3FEE8D005330DC /* ValidNumber.cpp */; };
@@ -41,6 +42,7 @@
 		44154E831A54763200FE182F /* LongestValidParentheses.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LongestValidParentheses.cpp; sourceTree = "<group>"; };
 		44154E851A54AAFB00FE182F /* WildcardMatching.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WildcardMatching.cpp; sourceTree = "<group>"; };
 		44A1EB2D1A5B5F6A00AAC960 /* OptimalBST.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OptimalBST.cpp; sourceTree = "<group>"; };
+		44A1EB2F1A5C729800AAC960 /* TopoSort.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TopoSort.cpp; sourceTree = "<group>"; };
 		44B1178C1A57503D0061B38A /* SubstrConcat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SubstrConcat.cpp; sourceTree = "<group>"; };
 		44CAC7D01A3FE15A005330DC /* Algo2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Algo2; sourceTree = BUILT_PRODUCTS_DIR; };
 		44CAC7D31A3FE15A005330DC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				44154E851A54AAFB00FE182F /* WildcardMatching.cpp */,
 				44B1178C1A57503D0061B38A /* SubstrConcat.cpp */,
 				44A1EB2D1A5B5F6A00AAC960 /* OptimalBST.cpp */,
+				44A1EB2F1A5C729800AAC960 /* TopoSort.cpp */,
 			);
 			path = Algo2;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				44A1EB2E1A5B5F6A00AAC960 /* OptimalBST.cpp in Sources */,
 				44F87A171A4F624D0085B688 /* FirstMissingPositive.cpp in Sources */,
 				44154E801A4FB7FB00FE182F /* Sudoku.cpp in Sources */,
+				44A1EB301A5C729800AAC960 /* TopoSort.cpp in Sources */,
 				44CAC7E11A43A706005330DC /* DivideMore.cpp in Sources */,
 				44154E821A51DB6C00FE182F /* MaxGap.cpp in Sources */,
 				44154E841A54763200FE182F /* LongestValidParentheses.cpp in Sources */,
